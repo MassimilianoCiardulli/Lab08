@@ -34,5 +34,5 @@ public class WordDAO {
 			throw new RuntimeException("Error Connection Database");
 		}
 	}
-
+	
 }

@@ -1,7 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.dizionariograph.DizionarioGraphController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="368.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="it.polito.tdp.dizionariograph.DizionarioGraphController">
+   <top>
+      <Label text="Lab08_Dizionario" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="5.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="328.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="422.0">
+               <children>
+                  <Label text="Inserire il numero di lettere:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNumero">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="422.0">
+               <children>
+                  <Label text="Inserire una parola da cercare:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtParola">
+                     <HBox.margin>
+                        <Insets left="17.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="450.0">
+               <children>
+                  <Button fx:id="btnGenera" mnemonicParsing="false" onAction="#handleGeneraGrafo" prefHeight="25.0" prefWidth="90.0" text="Genera Grafo">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnVicini" mnemonicParsing="false" onAction="#handleTrovaVicini" prefHeight="25.0" prefWidth="91.0" text="Trova vicini">
+                     <HBox.margin>
+                        <Insets left="50.0" right="17.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnGradoMax" mnemonicParsing="false" onAction="#handleTrovaGradoMax" text="Trova grado max">
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextArea fx:id="txtArea" prefHeight="152.0" prefWidth="410.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox prefHeight="28.0" prefWidth="450.0">
+               <children>
+                  <Pane prefHeight="28.0" prefWidth="374.0" />
+                  <Button fx:id="btnReset" mnemonicParsing="false" onAction="#handleReset" text="Reset" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
